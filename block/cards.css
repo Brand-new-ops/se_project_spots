@@ -1,0 +1,14 @@
+.cards {
+  padding-top: 20px;
+  border-bottom: 1px;
+}
+
+.cards-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auti-fit, 413px);
+  gap: 40px 20px;
+}
