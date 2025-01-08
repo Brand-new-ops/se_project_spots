@@ -2,29 +2,122 @@
   display: flex;
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+  /* align-items: flex-end; */
+}
+
+.profile__ctas {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .profile__avatar {
+  height: 190px;
+  width: 190px;
   margin-right: 20px;
+  border-radius: 8px;
 }
 
-.profile__columm {
+.profile__column {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
 }
 
 .profile__name {
   margin: 0 0 12px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 
 .profile__description {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 
 .profile__edit-btn {
   margin-top: auto;
+  background: url("../images/Group 2.svg") left center no-repeat;
+  border: none;
+  padding-left: 24px;
+}
+
+.profile__edit-btn:hover {
+  background: #212121b2;
 }
 
 .profile__add-btn {
   margin-left: auto;
+  width: 149px;
+  height: 52px;
+  border-radius: 8px;
+  background-color: #212121;
+  color: #fcf5e5;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.profile__add-btn:hover {
+  background-color: #212121cc;
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    margin: 0 0 6px;
+    max-width: 288px;
+  }
+
+  .profile__description {
+    margin: 0 0 32px;
+    max-width: 288px;
+    height: 42px;
+    gap: 6px;
+  }
+
+  .profile__columm {
+    margin: 0 0 20px;
+  }
+
+  .profile__avatar {
+    margin-right: 0;
+    height: 80px;
+    width: 80px;
+  }
+
+  .profile__edit-btn {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .profile__add-btn {
+    margin: 0;
+    width: 288px;
+    height: 52px;
+  }
 }
