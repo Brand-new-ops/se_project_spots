@@ -2,8 +2,14 @@
   max-width: 413px;
 }
 
+.card__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .card__image {
-  height: 445px;
+  height: 413px;
   width: 413px;
   object-fit: cover;
   border-radius: 8px;
@@ -31,13 +37,12 @@
 @media screen and (max-width: 627px) {
   .card__image {
     width: 288px;
-    height: 318px;
+    height: 288px;
     gap: 12px;
   }
 
   .card__content {
     display: flex;
-    height: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;

@@ -6,17 +6,16 @@
     <meta name="author" content="Brandon Collins" />
     <meta name="keywords" content="index.css,index.html" />
     <meta name="description" content="Brandon Collins Spots" />
-    <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-    <title>Document</title>
+    <title>Spots</title>
   </head>
-  <body>
-    <div class="page">
+  <body class="page">
+    <div class="page__content">
       <header class="header">
         <img src="./images/Logo.svg" alt="spots logo" class="header__logo" />
       </header>
-      <main class="content">
+      <main class="content page__section">
         <section class="profile">
           <img
             src="./images/avatar.jpg"
@@ -26,7 +25,7 @@
           <div class="profile__column">
             <h1 class="profile__name">Bessis Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
-            <div class="profile__ctas">
+            <div class="profile__buttons">
               <button type="button" class="profile__edit-btn">
                 Edit Profile
               </button>
@@ -77,13 +76,11 @@
             <li class="card">
               <img
                 src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="A very long bridge, over the forest..."
+                alt="A very long bridge, over the forest"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__title">
-                  A very long bridge, over the forest...
-                </h2>
+                <h2 class="card__title">A very long bridge, over the forest</h2>
                 <button type="button" class="card__like-button"></button>
               </div>
             </li>
@@ -114,7 +111,7 @@
           </ul>
         </section>
       </main>
-      <footer>
+      <footer class="footer">
         <p class="footer__copyright">2023&copy;Spots</p>
       </footer>
     </div>

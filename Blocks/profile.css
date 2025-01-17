@@ -7,7 +7,7 @@
   /* align-items: flex-end; */
 }
 
-.profile__ctas {
+.profile__buttons {
   margin-top: auto;
   display: flex;
   justify-content: space-between;

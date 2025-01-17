@@ -1,19 +1,14 @@
 .footer {
-  width: 104px;
-  height: 16px;
-  top: 1340px;
-  left: 668px;
-  gap: 0px;
-  opacity: 0px;
+  padding: 60px 0;
 }
 
 .footer__copyright {
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  text-align: left;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  margin-left: 600px;
+  margin: 0 auto;
 }

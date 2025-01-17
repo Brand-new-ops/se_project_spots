@@ -1,11 +1,18 @@
 .page {
   background-color: #fcf5e5;
   font-family: Poppins, Arial, helvetica, sans-serif;
-  max-width: 1369px;
+}
+.page__content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
 }
 
 .page__section {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
 }
