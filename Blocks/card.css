@@ -6,6 +6,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin: 0;
 }
 
 .card__image {
@@ -19,6 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 12px;
 }
 
 .card__like-button {
