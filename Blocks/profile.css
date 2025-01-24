@@ -34,7 +34,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+
   -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121;
@@ -45,7 +45,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121b2;
@@ -96,9 +95,6 @@
   font-weight: 500px;
   line-height: 16px;
   padding: 18px 24px 18px 20px;
-}
-
-.profile__add-btn:hover {
 }
 
 @media screen and (max-width: 627px) {
