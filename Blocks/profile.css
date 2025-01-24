@@ -85,7 +85,8 @@
 }
 
 .profile__add-btn {
-  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
   width: 149px;
   height: 52px;
   border-radius: 8px;
@@ -94,6 +95,7 @@
   font-size: 16px;
   font-weight: 500px;
   line-height: 16px;
+  padding: 18px 24px 18px 20px;
 }
 
 .profile__add-btn:hover {
