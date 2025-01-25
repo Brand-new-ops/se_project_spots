@@ -23,8 +23,6 @@ Good luck and have fun!
 # spots
 
 an image site
-![alt text](<Screenshot 2025-01-24 182043-1.png>)
-![alt text](<images/Screenshot 2025-01-24 182444.png>)
 
 ## description
 
