@@ -7,6 +7,13 @@
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #212121;
 }
 
 .card__image {

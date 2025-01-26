@@ -33,6 +33,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121;
@@ -43,6 +44,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121b2;
@@ -52,7 +54,6 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  opacity: 70%;
 }
 
 .profile__edit-btn {
@@ -124,19 +125,18 @@
     margin-right: 0;
     height: 80px;
     width: 80px;
+    margin-bottom: 12px;
   }
 
   .profile__edit-btn {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
+    margin: auto;
     height: 16px;
-    font-size: 16px;
-    line-height: 16px;
   }
 
   .profile__add-btn {
-    margin: 0;
+    margin-top: 20px;
     width: 288px;
   }
 }

@@ -3,7 +3,7 @@
   border-bottom: 1px;
   padding: 20px 0px 40px 0px;
   gap: 20px;
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid rgba(#212121);
   opacity: 0px;
 }
 
@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 627px) {
   .cards {
-    padding-bottom: 20px;
+    padding: 0 10px;
   }
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);

@@ -26,7 +26,7 @@ an image site
 
 ## description
 
-to describe project functions and capablility 
+to describe project functions and capablility
 https://www.loom.com/share/d1babffd19fd4afb9d359ee012e21747
 
 ## tech stack
@@ -38,6 +38,6 @@ responsive design
 ## deployment
 
 to deploy website to github
-
+https://brand-new-ops.github.io/se_project_spots/
 
 [def]: image-1.png
