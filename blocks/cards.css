@@ -3,8 +3,7 @@
   border-bottom: 1px;
   padding: 20px 0px 40px 0px;
   gap: 20px;
-  border-bottom: 1px solid rgba(#212121);
-  opacity: 0px;
+  border-bottom: 1px solid #212121;
 }
 
 .cards__list {

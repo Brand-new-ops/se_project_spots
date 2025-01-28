@@ -58,7 +58,7 @@
 
 .profile__edit-btn {
   margin-top: auto;
-  background: url("../images/Group 2.svg") left center no-repeat;
+  background: url("../images/Pencil.svg") left center no-repeat;
   border: none;
   padding-left: 24px;
   font-size: 16px;
@@ -79,6 +79,7 @@
 .profile__add-btn {
   width: 149px;
   height: 52px;
+  border: none;
   border-radius: 8px;
   background-color: #212121;
   color: #fcf5e5;
@@ -93,6 +94,10 @@
   display: flex;
   gap: 8px;
   cursor: pointer;
+}
+
+.profile__add-btn:hover {
+  opacity: 80%;
 }
 
 @media screen and (max-width: 627px) {
@@ -113,8 +118,7 @@
   .profile__description {
     margin: 0 0 32px;
     max-width: 288px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
   .profile__columm {
