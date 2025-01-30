@@ -14,7 +14,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #212121;
-  width: 119px;
+  width: 260px;
 }
 
 .card__image {
@@ -32,7 +32,7 @@
 }
 
 .card__like-button {
-  background-image: url(../images/Union.svg);
+  background-image: url(../images/union.svg);
   width: 23px;
   height: 20px;
   border: none;
@@ -55,7 +55,6 @@
   }
 
   .card__content {
-    display: flex;
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
@@ -68,5 +67,5 @@
   .card__title {
     font-size: 16px;
     line-height: 16px;
-}
+  }
 }
