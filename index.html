@@ -34,20 +34,20 @@
             <img src="./images/plus.svg" alt="new posts" />New Post
           </button>
         </section>
-        <section class="cards page__section">
-          <ul class="cards__list"> 
+        <section class="">
+          <ul class="cards__list">
             <template id="card-template">
-            <li class="card">
-              <img
-                src=""
-                alt=""
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title"></h2>
-                <button aria-label="like card" type="button" class="card__like-button"></button>
-              </div>
-            </li>
+              <li class="card">
+                <img src="" alt="" class="card__image" />
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button
+                    aria-label="like card"
+                    type="button"
+                    class="card__like-button"
+                  ></button>
+                </div>
+              </li>
             </template>
           </ul>
         </section>
@@ -59,9 +59,9 @@
         <div class="modal__container">
           <h2 class="modal__title">Edit profile</h2>
           <button type="button" class="modal__close-btn">
-            <img src=".//images/close.png" alt="close" />
+            <img src=".//images/close.svg" alt="close" />
           </button>
-          <form action="Edit profile" class="modal__form">
+          <form class="modal__form">
             <label for="profile-name-input" class="modal__label">
               Name
               <input
