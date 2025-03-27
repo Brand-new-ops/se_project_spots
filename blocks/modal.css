@@ -14,7 +14,7 @@
   visibility: hidden;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -40,6 +40,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
+  cursor: pointer;
 }
 .modal__close-btn:hover {
   opacity: 40%;
@@ -68,6 +69,7 @@
   background-color: #212121;
   color: #fff;
   border-radius: 8px;
+   cursor: pointer;
 }
 
 .modal__submit-btn:hover {
