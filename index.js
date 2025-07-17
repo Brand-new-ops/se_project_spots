@@ -24,6 +24,10 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
+  {
+    name: "Golden gate bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 ];
 
 console.log(initialCards);
@@ -47,6 +51,10 @@ const editModalDescriptionInput = editModal.querySelector(
 
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
+const cardModalEl = document.querySelector("#expand-modal");
+const cardModalClosedBtn = document.querySelector(".modal__close-image-btn");
+const cardModalImageEl = document.querySelector(".modal__expand");
+const cardModalCaptionEl = document.querySelector(".modal__caption");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -58,29 +66,54 @@ function getCardElement(data) {
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
+  const cardLikeBtnEl = cardElement.querySelector(".card__like-button");
+  cardLikeBtnEl.addEventListener("click", () => {
+    cardLikeBtnEl.classList.toggle("card__like-button_active");
+  });
+  const cardDeleteBtnEl = cardElement.querySelector(".card__delete-button");
+  cardDeleteBtnEl.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
+  cardImageEl.addEventListener("click", () => {
+    cardModalEl.classList.toggle("modal_open");
+    cardModalCaptionEl.textContent = data.name;
+    cardModalImageEl.src = data.link;
+    cardModalImageEl.alt = data.name;
+    cardModalClosedBtn.addEventListener("click", () => {
+      closeImageModal();
+    });
+  });
   return cardElement;
+
+  //add an event listeneer to the card element
+  // listen to a click event, and the callback will add a classname to the variable below
 }
 
-function openedModal() {
+// create a variable that is equal to the expand modal
+
+function openModal() {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  editModal.classList.add("modal_opened");
+  editModal.classList.add("modal_open");
 }
 
-function closedModal() {
-  editModal.classList.remove("modal_opened");
+function closeModal() {
+  editModal.classList.remove("modal_open");
 }
-
+function closeImageModal() {
+  cardModalEl.classList.remove("modal_open");
+}
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  closedModal();
+  closeModal();
 }
 
-profileEditButton.addEventListener("click", openedModal);
+profileEditButton.addEventListener("click", openModal);
 
-editModalClosebtn.addEventListener("click", closedModal);
+editModalClosebtn.addEventListener("click", closeModal);
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 

@@ -46,6 +46,11 @@
                     type="button"
                     class="card__like-button"
                   ></button>
+                  <button
+                    aria-label=""
+                    type=""
+                    class="card__delete-button"
+                  ></button>
                 </div>
               </li>
             </template>
@@ -83,6 +88,15 @@
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
+      </div>
+    </div>
+    <div class="modal modal-is-opened" id="expand-modal">
+      <div class="modal__imagine-container">
+        <h2 class="modal__caption"></h2>
+        <button type="button" class="modal__close-image-btn">
+          <img src=".//images/close.svg" alt="close" />
+        </button>
+        <img src="" alt="" class="modal__expand" />
       </div>
     </div>
     <script src="./index.js"></script>
