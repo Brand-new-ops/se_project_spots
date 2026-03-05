@@ -58,9 +58,12 @@ const cardModalCaptionEl = document.querySelector(".modal__caption");
 
 // query select the new post button (ie: the button that when clicked is supposed to open up the new-post modal)
 // query select the new-post modal
-const newPostBtn = document.querySelector(".profile__add-btn")
-const newpostModal = document.querySelector("#new-modal")
-const newpostClosebtn = newpostModal.querySelector(".modal__close-btn")
+const newPostBtn = document.querySelector(".profile__add-btn");
+const newpostModal = document.querySelector("#new-modal");
+const newpostClosebtn = newpostModal.querySelector(".modal__close-btn");
+const newpostNameInput = newpostModal.querySelector("#new-post-caption-input");
+const newpostLink = newpostModal.querySelector("#new-post-image-input");
+const newPostForm = newpostModal.querySelector(".modal__form");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -121,7 +124,17 @@ function handleEditFormSubmit(evt) {
   profileDescription.textContent = editModalDescriptionInput.value;
   closeModal();
 }
-
+function newPostFormSubmit(evt) {
+  evt.preventDefault();
+  const values = {
+    name: newpostNameInput.value,
+    link: newpostLink.value,
+  };
+  const card = getCardElement(values);
+  cardList.prepend(card);
+  evt.target.reset();
+  closeModal(newpostModal);
+}
 // sets up an event listener on the profile-edit button, so that when we click it, it opens up the edit-modal
 profileEditButton.addEventListener("click", () => {
   // auto-fill the inputs in the edit-modal
@@ -136,12 +149,13 @@ profileEditButton.addEventListener("click", () => {
 editModalClosebtn.addEventListener("click", closeModal);
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
-newPostBtn.addEventListener("click", function (){
-  openModal(newpostModal)
-})
-newpostClosebtn.addEventListener("click",function (){
-  closeModal(newpostModal)
-})
+newPostForm.addEventListener("submit",newPostFormSubmit)
+newPostBtn.addEventListener("click", function () {
+  openModal(newpostModal);
+});
+newpostClosebtn.addEventListener("click", function () {
+  closeModal(newpostModal);
+});
 initialCards.forEach((item) => {
   const cardEl = getCardElement(item);
   cardList.append(cardEl);
