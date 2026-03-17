@@ -85,13 +85,11 @@ function getCardElement(data) {
   });
 
   cardImageEl.addEventListener("click", () => {
-    cardModalEl.classList.toggle("modal_open");
+    openModal(cardModalEl);
     cardModalCaptionEl.textContent = data.name;
     cardModalImageEl.src = data.link;
     cardModalImageEl.alt = data.name;
-    cardModalClosedBtn.addEventListener("click", () => {
-      closeImageModal();
-    });
+   
   });
   return cardElement;
 
@@ -115,14 +113,12 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_open");
 }
-function closeImageModal() {
-  cardModalEl.classList.remove("modal_open");
-}
+
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  closeModal();
+  closeModal(editModal);
 }
 function newPostFormSubmit(evt) {
   evt.preventDefault();
@@ -146,16 +142,22 @@ profileEditButton.addEventListener("click", () => {
 
 // set up an event listener on the new-post button, so that when click it, it opens up the new-post modal
 
-editModalClosebtn.addEventListener("click", closeModal);
-
+editModalClosebtn.addEventListener("click", function () {
+  closeModal(editModal);
+}); 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
-newPostForm.addEventListener("submit",newPostFormSubmit)
+newPostForm.addEventListener("submit", newPostFormSubmit);
 newPostBtn.addEventListener("click", function () {
   openModal(newpostModal);
 });
 newpostClosebtn.addEventListener("click", function () {
   closeModal(newpostModal);
 });
+
+ cardModalClosedBtn.addEventListener("click", () => {
+   closeModal(cardModalEl);
+ });
+
 initialCards.forEach((item) => {
   const cardEl = getCardElement(item);
   cardList.append(cardEl);
